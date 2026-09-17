@@ -1,13 +1,14 @@
 <?php
 /**
  * Plugin Name:       Downloader Toolkit
- * Plugin URI:        https://wordpress.org/plugins/downloader-toolkit
+ * Plugin URI:        https://github.com/bayzidMostafiz/Downloader-Toolkit.git
  * Description:       A comprehensive WordPress asset and file manager toolkit. Download installed themes, plugins, media library files, and manage site files directly from WP Dashboard.
  * Version:           1.0.0
  * Requires at least: 5.6
+ * Tested up to: 7.1
  * Requires PHP:      7.4
  * Author:            Md. Bayzid Mostafiz
- * Author URI:        https://www.linkedin.com/in/md-bayzid-mostafiz-152b80139/
+ * Author URI:        https://bayzidmostafiz.com
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       downloader-toolkit
