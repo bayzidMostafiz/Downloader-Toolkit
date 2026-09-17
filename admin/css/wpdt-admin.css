@@ -1,0 +1,405 @@
+/**
+ * WP Downloader Toolkit Admin Styles
+ */
+
+.wpdt-wrapper {
+	margin-top: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wpdt-title {
+	font-size: 28px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.wpdt-title .dashicons {
+	font-size: 32px;
+	width: 32px;
+	height: 32px;
+	color: #2271b1;
+}
+
+.wpdt-subtitle {
+	font-size: 14px;
+	color: #646970;
+	margin-bottom: 20px;
+}
+
+.wpdt-tabs {
+	margin-bottom: 20px;
+}
+
+.wpdt-tabs .nav-tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	font-size: 14px;
+}
+
+/* File Manager Container & Breadcrumbs */
+.wpdt-fm-container {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	padding: 16px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.wpdt-fm-breadcrumbs {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 10px 14px;
+	font-size: 14px;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+}
+
+.wpdt-fm-breadcrumbs .dashicons {
+	color: #2271b1;
+}
+
+.wpdt-crumb-sep {
+	color: #8c8f94;
+	font-weight: bold;
+}
+
+.wpdt-crumb-link {
+	color: #2271b1;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.wpdt-crumb-link:hover {
+	text-decoration: underline;
+}
+
+.wpdt-crumb-current {
+	color: #1d2327;
+	font-weight: 600;
+}
+
+/* Toolbar Row & File Upload Form */
+.wpdt-toolbar-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 12px 16px;
+	margin-bottom: 12px;
+}
+
+.wpdt-upload-form {
+	margin: 0;
+}
+
+.wpdt-upload-controls {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.wpdt-file-input {
+	font-size: 13px;
+	padding: 4px;
+	background: #f6f7f7;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+}
+
+.wpdt-fm-path-info {
+	font-size: 12px;
+	color: #50575e;
+	margin-bottom: 12px;
+}
+
+.wpdt-fm-path-info code {
+	background: #f0f0f1;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+/* File Manager Table & Actions */
+.wpdt-fm-table {
+	margin-top: 10px;
+}
+
+.wpdt-file-icon {
+	color: #2271b1;
+	margin-right: 6px;
+	vertical-align: text-bottom;
+}
+
+.wpdt-folder-link {
+	color: #1d2327;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.wpdt-folder-link:hover {
+	color: #2271b1;
+	text-decoration: underline;
+}
+
+.wpdt-parent-dir-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: #2271b1;
+	text-decoration: none;
+}
+
+.wpdt-text-right {
+	text-align: right !important;
+}
+
+.wpdt-row-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 6px;
+}
+
+.wpdt-btn-delete {
+	background-color: #fcf0f1 !important;
+	border-color: #dadcde !important;
+	color: #d63638 !important;
+}
+
+.wpdt-btn-delete:hover {
+	background-color: #d63638 !important;
+	border-color: #d63638 !important;
+	color: #ffffff !important;
+}
+
+/* Code Editor Interface */
+.wpdt-editor-box {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.wpdt-editor-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.wpdt-editor-header h3 {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 18px;
+}
+
+.wpdt-editor-wrapper {
+	margin-bottom: 20px;
+}
+
+.wpdt-code-area {
+	font-family: Consolas, Monaco, "Courier New", Courier, monospace !important;
+	font-size: 13px !important;
+	line-height: 1.5 !important;
+	background-color: #282c34 !important;
+	color: #abb2bf !important;
+	border-radius: 6px;
+	padding: 14px;
+	width: 100%;
+	box-sizing: border-box;
+	tab-size: 4;
+}
+
+.wpdt-editor-actions {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+/* Grid Layout for Themes & Plugins Cards */
+.wpdt-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.wpdt-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 16px;
+	transition: all 0.2s ease-in-out;
+}
+
+.wpdt-card:hover {
+	border-color: #2271b1;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wpdt-card.wpdt-active-item {
+	border-left: 4px solid #00a32a;
+}
+
+.wpdt-card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.wpdt-card-header h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.wpdt-badge {
+	padding: 2px 8px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.wpdt-badge-active {
+	background-color: #e7f6ed;
+	color: #00a32a;
+}
+
+.wpdt-badge-inactive {
+	background-color: #f0f0f1;
+	color: #646970;
+}
+
+.wpdt-card-body p {
+	margin: 4px 0;
+	font-size: 13px;
+	color: #50575e;
+}
+
+.wpdt-card-footer {
+	margin-top: 16px;
+	padding-top: 12px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.wpdt-btn-download {
+	width: 100%;
+	display: inline-flex !important;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+/* Media Grid */
+.wpdt-actions-bar {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 12px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.wpdt-media-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 16px;
+}
+
+.wpdt-media-item {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.wpdt-media-checkbox {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 2;
+}
+
+.wpdt-media-preview {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f6f7f7;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: 8px;
+}
+
+.wpdt-media-preview img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+.wpdt-icon-large {
+	font-size: 48px;
+	width: 48px;
+	height: 48px;
+	color: #8c8f94;
+}
+
+.wpdt-media-info {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.wpdt-media-title {
+	font-size: 12px;
+	color: #2c3338;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.wpdt-media-actions {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.wpdt-pagination {
+	margin-top: 20px;
+	text-align: center;
+}
