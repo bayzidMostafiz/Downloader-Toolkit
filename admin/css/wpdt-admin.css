@@ -1,5 +1,5 @@
 /**
- * WP Downloader Toolkit Admin Styles
+ * Downloader Toolkit Admin Styles
  */
 
 .wpdt-wrapper {
@@ -38,198 +38,6 @@
 	gap: 6px;
 	padding: 8px 16px;
 	font-size: 14px;
-}
-
-/* File Manager Container & Breadcrumbs */
-.wpdt-fm-container {
-	background: #fff;
-	border: 1px solid #c3c4c7;
-	border-radius: 8px;
-	padding: 16px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.wpdt-fm-breadcrumbs {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	background: #f6f7f7;
-	border: 1px solid #dcdcde;
-	border-radius: 6px;
-	padding: 10px 14px;
-	font-size: 14px;
-	margin-bottom: 16px;
-	flex-wrap: wrap;
-}
-
-.wpdt-fm-breadcrumbs .dashicons {
-	color: #2271b1;
-}
-
-.wpdt-crumb-sep {
-	color: #8c8f94;
-	font-weight: bold;
-}
-
-.wpdt-crumb-link {
-	color: #2271b1;
-	text-decoration: none;
-	font-weight: 500;
-}
-
-.wpdt-crumb-link:hover {
-	text-decoration: underline;
-}
-
-.wpdt-crumb-current {
-	color: #1d2327;
-	font-weight: 600;
-}
-
-/* Toolbar Row & File Upload Form */
-.wpdt-toolbar-row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 16px;
-	flex-wrap: wrap;
-	background: #fff;
-	border: 1px solid #c3c4c7;
-	border-radius: 6px;
-	padding: 12px 16px;
-	margin-bottom: 12px;
-}
-
-.wpdt-upload-form {
-	margin: 0;
-}
-
-.wpdt-upload-controls {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.wpdt-file-input {
-	font-size: 13px;
-	padding: 4px;
-	background: #f6f7f7;
-	border: 1px solid #c3c4c7;
-	border-radius: 4px;
-}
-
-.wpdt-fm-path-info {
-	font-size: 12px;
-	color: #50575e;
-	margin-bottom: 12px;
-}
-
-.wpdt-fm-path-info code {
-	background: #f0f0f1;
-	padding: 4px 8px;
-	border-radius: 4px;
-}
-
-/* File Manager Table & Actions */
-.wpdt-fm-table {
-	margin-top: 10px;
-}
-
-.wpdt-file-icon {
-	color: #2271b1;
-	margin-right: 6px;
-	vertical-align: text-bottom;
-}
-
-.wpdt-folder-link {
-	color: #1d2327;
-	text-decoration: none;
-	font-size: 14px;
-}
-
-.wpdt-folder-link:hover {
-	color: #2271b1;
-	text-decoration: underline;
-}
-
-.wpdt-parent-dir-link {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	color: #2271b1;
-	text-decoration: none;
-}
-
-.wpdt-text-right {
-	text-align: right !important;
-}
-
-.wpdt-row-actions {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 6px;
-}
-
-.wpdt-btn-delete {
-	background-color: #fcf0f1 !important;
-	border-color: #dadcde !important;
-	color: #d63638 !important;
-}
-
-.wpdt-btn-delete:hover {
-	background-color: #d63638 !important;
-	border-color: #d63638 !important;
-	color: #ffffff !important;
-}
-
-/* Code Editor Interface */
-.wpdt-editor-box {
-	background: #fff;
-	border: 1px solid #c3c4c7;
-	border-radius: 8px;
-	padding: 20px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.wpdt-editor-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 16px;
-	padding-bottom: 12px;
-	border-bottom: 1px solid #f0f0f1;
-}
-
-.wpdt-editor-header h3 {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	font-size: 18px;
-}
-
-.wpdt-editor-wrapper {
-	margin-bottom: 20px;
-}
-
-.wpdt-code-area {
-	font-family: Consolas, Monaco, "Courier New", Courier, monospace !important;
-	font-size: 13px !important;
-	line-height: 1.5 !important;
-	background-color: #282c34 !important;
-	color: #abb2bf !important;
-	border-radius: 6px;
-	padding: 14px;
-	width: 100%;
-	box-sizing: border-box;
-	tab-size: 4;
-}
-
-.wpdt-editor-actions {
-	display: flex;
-	gap: 12px;
-	align-items: center;
 }
 
 /* Grid Layout for Themes & Plugins Cards */
@@ -403,3 +211,181 @@
 	margin-top: 20px;
 	text-align: center;
 }
+
+/* Modal Overlay & Card Styles - Forced High Priority Fixed Overlay */
+body .wpdt-modal-overlay {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	background: rgba(18, 25, 38, 0.75) !important;
+	backdrop-filter: blur(4px);
+	z-index: 9999999 !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	padding: 20px !important;
+	box-sizing: border-box !important;
+}
+
+.wpdt-modal-card {
+	background: #ffffff !important;
+	border-radius: 12px !important;
+	max-width: 480px !important;
+	width: 100% !important;
+	padding: 28px !important;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+	animation: wpdtModalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	position: relative !important;
+	z-index: 10000000 !important;
+}
+
+@keyframes wpdtModalSlideIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.wpdt-modal-header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.wpdt-modal-icon {
+	width: 54px;
+	height: 54px;
+	background: #e7f1f9;
+	color: #2271b1;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+
+.wpdt-modal-icon .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.wpdt-modal-header h2 {
+	font-size: 22px;
+	font-weight: 700;
+	margin: 0 0 8px 0;
+	color: #1d2327;
+}
+
+.wpdt-modal-header p {
+	font-size: 13px;
+	color: #646970;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.wpdt-modal-form .wpdt-form-field {
+	margin-bottom: 14px;
+}
+
+.wpdt-modal-form label {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	color: #2c3338;
+	margin-bottom: 4px;
+}
+
+.wpdt-modal-form input[type="text"],
+.wpdt-modal-form input[type="email"],
+.wpdt-modal-form input[type="tel"] {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	font-size: 13px;
+	box-shadow: none;
+	transition: border-color 0.2s;
+}
+
+.wpdt-modal-form input:focus {
+	border-color: #2271b1;
+	outline: none;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.wpdt-telemetry-notice {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 10px 12px;
+	margin-bottom: 20px;
+	font-size: 11px;
+	color: #50575e;
+}
+
+.wpdt-telemetry-notice strong {
+	color: #1d2327;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-bottom: 4px;
+}
+
+.wpdt-telemetry-notice ul {
+	margin: 4px 0 0 0;
+	padding-left: 16px;
+	list-style-type: disc;
+}
+
+.wpdt-telemetry-notice li {
+	margin-bottom: 2px;
+}
+
+.wpdt-modal-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.wpdt-modal-actions .button {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 6px !important;
+	min-height: 40px !important;
+	height: 40px !important;
+	padding: 0 16px !important;
+	line-height: 40px !important;
+}
+
+.wpdt-modal-actions .button .dashicons {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	vertical-align: middle !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 18px !important;
+	width: 18px !important;
+	height: 18px !important;
+	line-height: 1 !important;
+	float: none !important;
+}
+
+.wpdt-modal-submit {
+	flex: 1;
+}
+
+.wpdt-modal-skip {
+	flex: 0 0 auto;
+}
+

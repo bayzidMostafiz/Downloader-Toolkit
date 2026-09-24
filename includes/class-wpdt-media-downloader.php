@@ -24,12 +24,12 @@ if ( ! class_exists( 'WPDT_Media_Downloader' ) ) {
 		public static function wpdt_download_single_media( $attachment_id ) {
 			$attachment_id = absint( $attachment_id );
 			if ( ! $attachment_id ) {
-				wp_die( esc_html__( 'Invalid attachment ID.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Invalid attachment ID.', 'nizbay-asset-downloader' ) );
 			}
 
 			$file_path = get_attached_file( $attachment_id );
 			if ( ! $file_path || ! file_exists( $file_path ) ) {
-				wp_die( esc_html__( 'Media file not found on disk.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Media file not found on disk.', 'nizbay-asset-downloader' ) );
 			}
 
 			$filename = basename( $file_path );
@@ -45,11 +45,11 @@ if ( ! class_exists( 'WPDT_Media_Downloader' ) ) {
 		public static function wpdt_download_bulk_media( array $attachment_ids ) {
 			$ids = array_filter( array_map( 'absint', $attachment_ids ) );
 			if ( empty( $ids ) ) {
-				wp_die( esc_html__( 'No valid media files selected for download.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'No valid media files selected for download.', 'nizbay-asset-downloader' ) );
 			}
 
 			if ( ! class_exists( 'ZipArchive' ) ) {
-				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'nizbay-asset-downloader' ) );
 			}
 
 			$temp_dir = get_temp_dir();
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WPDT_Media_Downloader' ) ) {
 
 			$zip = new ZipArchive();
 			if ( $zip->open( $zip_file_path, ZipArchive::CREATE | ZipArchive::OVERWRITE ) !== true ) {
-				wp_die( esc_html__( 'Could not create ZIP archive for media files.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Could not create ZIP archive for media files.', 'nizbay-asset-downloader' ) );
 			}
 
 			$added_count = 0;
@@ -86,7 +86,7 @@ if ( ! class_exists( 'WPDT_Media_Downloader' ) ) {
 				wp_delete_file( $zip_file_path );
 				exit;
 			} else {
-				wp_die( esc_html__( 'Failed to create ZIP package or no files were accessible.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Failed to create ZIP package or no files were accessible.', 'nizbay-asset-downloader' ) );
 			}
 		}
 	}

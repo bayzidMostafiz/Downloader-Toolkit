@@ -23,21 +23,21 @@ if ( ! class_exists( 'WPDT_Theme_Downloader' ) ) {
 		 */
 		public static function wpdt_download_theme( $stylesheet ) {
 			if ( empty( $stylesheet ) ) {
-				wp_die( esc_html__( 'Invalid theme specified.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Invalid theme specified.', 'nizbay-asset-downloader' ) );
 			}
 
 			if ( ! class_exists( 'ZipArchive' ) ) {
-				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'nizbay-asset-downloader' ) );
 			}
 
 			$theme = wp_get_theme( $stylesheet );
 			if ( ! $theme->exists() ) {
-				wp_die( esc_html__( 'Theme does not exist.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Theme does not exist.', 'nizbay-asset-downloader' ) );
 			}
 
 			$theme_dir = $theme->get_stylesheet_directory();
 			if ( ! is_dir( $theme_dir ) ) {
-				wp_die( esc_html__( 'Theme directory not found on server.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Theme directory not found on server.', 'nizbay-asset-downloader' ) );
 			}
 
 			$zip_name = sanitize_file_name( $stylesheet ) . '.zip';
@@ -46,7 +46,7 @@ if ( ! class_exists( 'WPDT_Theme_Downloader' ) ) {
 
 			$zip = new ZipArchive();
 			if ( $zip->open( $zip_file_path, ZipArchive::CREATE | ZipArchive::OVERWRITE ) !== true ) {
-				wp_die( esc_html__( 'Could not create ZIP archive for theme.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Could not create ZIP archive for theme.', 'nizbay-asset-downloader' ) );
 			}
 
 			self::wpdt_add_folder_to_zip( $theme_dir, $zip, strlen( dirname( $theme_dir ) ) + 1 );
@@ -57,7 +57,7 @@ if ( ! class_exists( 'WPDT_Theme_Downloader' ) ) {
 				wp_delete_file( $zip_file_path );
 				exit;
 			} else {
-				wp_die( esc_html__( 'Failed to generate theme ZIP package.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Failed to generate theme ZIP package.', 'nizbay-asset-downloader' ) );
 			}
 		}
 
@@ -94,7 +94,7 @@ if ( ! class_exists( 'WPDT_Theme_Downloader' ) ) {
 		 */
 		public static function wpdt_stream_file( $file_path, $download_filename ) {
 			if ( ! file_exists( $file_path ) ) {
-				wp_die( esc_html__( 'File not found for download.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'File not found for download.', 'nizbay-asset-downloader' ) );
 			}
 
 			if ( ob_get_level() ) {

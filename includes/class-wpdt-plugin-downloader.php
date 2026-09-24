@@ -23,16 +23,16 @@ if ( ! class_exists( 'WPDT_Plugin_Downloader' ) ) {
 		 */
 		public static function wpdt_download_plugin( $plugin_file ) {
 			if ( empty( $plugin_file ) ) {
-				wp_die( esc_html__( 'Invalid plugin specified.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Invalid plugin specified.', 'nizbay-asset-downloader' ) );
 			}
 
 			if ( ! class_exists( 'ZipArchive' ) ) {
-				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'PHP ZipArchive extension is required on your server to create ZIP archives.', 'nizbay-asset-downloader' ) );
 			}
 
 			$full_plugin_path = WP_PLUGIN_DIR . '/' . $plugin_file;
 			if ( ! file_exists( $full_plugin_path ) ) {
-				wp_die( esc_html__( 'Plugin file or directory does not exist.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Plugin file or directory does not exist.', 'nizbay-asset-downloader' ) );
 			}
 
 			$is_dir = false;
@@ -51,7 +51,7 @@ if ( ! class_exists( 'WPDT_Plugin_Downloader' ) ) {
 
 			$zip = new ZipArchive();
 			if ( $zip->open( $zip_file_path, ZipArchive::CREATE | ZipArchive::OVERWRITE ) !== true ) {
-				wp_die( esc_html__( 'Could not create ZIP archive for plugin.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Could not create ZIP archive for plugin.', 'nizbay-asset-downloader' ) );
 			}
 
 			if ( $is_dir ) {
@@ -67,7 +67,7 @@ if ( ! class_exists( 'WPDT_Plugin_Downloader' ) ) {
 				wp_delete_file( $zip_file_path );
 				exit;
 			} else {
-				wp_die( esc_html__( 'Failed to generate plugin ZIP package.', 'downloader-toolkit' ) );
+				wp_die( esc_html__( 'Failed to generate plugin ZIP package.', 'nizbay-asset-downloader' ) );
 			}
 		}
 
